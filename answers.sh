@@ -40,5 +40,41 @@ INSERT INTO gradutes (ID, name, Age, Gender, Points)
 SELECT id, name, Age, Gender, Points
 FROM students WHERE name="Layal";
 
+JOINS 
+
+problem-1 Produce a table that contains, for each employee, his/her name, company name, and company date.
+
+answer:
+
+SELECT employees.name, companies.name, date
+FROM employees
+INNER JOIN companies
+on employees.Company = companies.name
+
+
+problem-2 Find the name of employees that work in companies made before 2000.
+
+answer:
+
+SELECT employees.name, companies.name, date
+FROM employees
+INNER JOIN companies
+on employees.Company = companies.name
+WHERE date < 2000
+
+problem-3 Find the name of company that has a graphic designer.
+
+answer:
+
+SELECT companies.name
+FROM employees
+INNER JOIN companies
+on employees.Company = companies.name
+WHERE employees.Role = "Graphic Designer"
+
+or 
+
+SELECT Company from employees
+WHERE Role = "Graphic Designer"
 
 
