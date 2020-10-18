@@ -20,3 +20,25 @@ Answer:UPDATE students SET Points = "700" WHERE name = "Basma"
 
 Problem-7: Decrease the points of Alex because hes late today.
 Answer:UPDATE students SET Points = "180" WHERE name = "Alex"
+
+
+
+Creating Table
+
+CREATE TABLE gradutes (
+	ID NOT NULL PRIMARY KEY,
+	Name TEXT NOT NULL UNIQUE,
+	Age INTEGER,
+	Gender TEXT,
+	Points INTEGER,
+	Graduation DATE
+);
+
+Copying from one table to another
+
+INSERT INTO gradutes (ID, name, Age, Gender, Points)
+SELECT id, name, Age, Gender, Points
+FROM students WHERE name="Layal";
+
+
+
