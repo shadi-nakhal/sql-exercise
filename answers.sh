@@ -78,3 +78,41 @@ SELECT Company from employees
 WHERE Role = "Graphic Designer"
 
 
+Count & Filter
+
+
+problem-1 Find the person with the highest number of points in students
+
+answer:
+
+SELECT ID, name, Age, Gender, max(Points) as highest_Points FROM students
+
+
+problem-2 Find the average of points in students
+
+answer: SELECT avg(Points) as Average_Points FROM students
+
+
+problem-3 Find the number of students that have 500 points
+
+answer:
+
+SELECT count(name) as Number_of_Students_that_have_500_pints FROM students
+WHERE Points = 500
+
+
+problem-4 Find the names of students that contains 's'
+
+answer:
+SELECT name FROM students
+WHERE name like "%s%"
+
+problem-5 Find all students based on the decreasing order of their points
+
+answer :
+SELECT name, Points FROM students
+ORDER BY Points DESC
+
+
+
+
